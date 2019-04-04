@@ -8,8 +8,8 @@ import com.cognizant.pts.entity.Clerk;
 
 public interface ClerkDAO {
 	
-	 List<Clerk> getAllClerks();
+	 List<Clerk> viewAllClerks();
 	 boolean insertClerk(Clerk clerk);
-	 //boolean deleteClerk(Clerk clerk);
-	 //boolean updateClerk(Clerk clerk);
+	Clerk viewOneClerk(String clerkId);
+	 boolean updateClerk(Clerk clerk);
 }

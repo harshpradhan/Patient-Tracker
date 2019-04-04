@@ -15,14 +15,14 @@ font-style: italic;
 </style>
 </head>
 <body>
-<springform:form modelAttribute="clerkModel" method="post" action="addclerk.htm">
+<springform:form commandName="oneClerk" method="post" action="updateclerk.htm">
 <table>
-<%-- <tr>
+<tr>
 <td><springform:label path="clerkId" >Clerk Id:</springform:label></td>
-<td><springform:input path="clerkId"/>
+<td><springform:input path="clerkId" disabled="true"/>
 <springform:errors path="clerkId" cssClass="error" ></springform:errors>
 </td>
-</tr> --%>
+</tr>
 <tr>
 <td><springform:label path="firstName" >First Name:</springform:label></td>
 <td><springform:input path="firstName"/>
@@ -104,7 +104,7 @@ font-style: italic;
 </tr>
 
 <tr>
-<td><input type="submit" value="Add Clerk"></td>
+<td><input type="submit" value="Update Clerk"></td>
 
 
 </tr>

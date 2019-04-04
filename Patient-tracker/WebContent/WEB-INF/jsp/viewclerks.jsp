@@ -8,12 +8,13 @@
 <title>Clerk Details</title>
 </head>
 <body>
+
 <table>
 <tr>
 <th>Clerk Id</th>
 <th>Clerk First Name</th>
 <th>Clerk Last Name</th>
-<th>Clerk Age </th>
+<!-- <th>Clerk Age </th>
 <th>Clerk Gender</th>
 <th>Clerk DOB</th>
 <th>Clerk Contact No.</th>
@@ -24,15 +25,19 @@
 <th>Clerk City</th>
 <th>Clerk State</th>
 <th>Clerk Zip-code</th>
-
+ -->
 </tr>
 
 <c:forEach items="${clerkList}" var="clerk">
 <tr>
-<td><c:out value="${clerk.clerkId}"/></td>
+<td>
+<a href="viewoneclerk.htm?clerkId=${clerk.clerkId}">
+<c:out value="${clerk.clerkId}"/></a></td>
+
 <td><c:out value="${clerk.firstName}"/></td>
+
 <td><c:out value="${clerk.lastName}"/></td>
-<td><c:out value="${clerk.age}"/></td>
+<%-- <td><c:out value="${clerk.age}"/></td>
 <td><c:out value="${clerk.gender}"/></td>
 <td><c:out value="${clerk.dob}"/></td>
 <td><c:out value="${clerk.contactNumber}"/></td>
@@ -42,28 +47,22 @@
 <td><c:out value="${clerk.addressLine2}"/></td>
 <td><c:out value="${clerk.city}"/></td>
 <td><c:out value="${clerk.state}"/></td>
-<td><c:out value="${clerk.zipCode}"/></td>
-
+<td><c:out value="${clerk.zipCode}"/></td> --%>
+</tr>
 </c:forEach>
 
 </table>
-<table>
-<tr>
-<td>
-<form method="get" action="addclerkform.htm">
+
+<form method="post" action="addclerkform.htm">
 <input type="submit" value="Add Clerk"/>
 </form>
-</td>
-<td>
+
+<!-- <td>
 <form method="get" action="clerkform.htm">
 <input type="submit" value="Update Clerk"/>
 </form>
-</td>
-<td>
-<form method="get" action="clerkform.htm">
-<input type="submit" value="Delete Clerk"/>
-</form>
-</td>
-</tr>
+</td> -->
+
+
 </body>
 </html>
